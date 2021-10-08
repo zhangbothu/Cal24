@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FDFCEA">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="1"
+                    android:text="重新开始"
+                    android:textSize="30sp"
+                    app:backgroundTint="#5F553A" />
+
+                <Button
+                    android:id="@+id/startCal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="2dp"
+                    android:textSize="30sp"
+                    android:text="开始计算" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hitCards"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginLeft="-15dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/allcards"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/resultsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="#7C39F4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="计算结果：" />
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:textColor="#7C39F4"
+                android:textSize="18sp"
+                android:lineSpacingMultiplier="0.6"
+                android:textStyle="bold"
+                android:text="" />
+
+        </LinearLayout>
+        </ScrollView>
+</LinearLayout>
